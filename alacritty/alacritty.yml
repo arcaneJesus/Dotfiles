@@ -1,0 +1,111 @@
+env: 
+ TERM: xterm-256color
+
+colors:
+  primary:
+    foreground: '#b1b3b5'
+    background: '#0c040a'
+
+  cursor:
+    text: '#b1b3b5'
+    # Same color as active border
+    cursor: '#b182d9'
+
+  normal:
+    black: '#0c0c0d'
+    red: '#77131f'
+    green: '#fabe62'
+    blue: '#2C187B'
+    magenta: '#9e63d0'
+    cyan: '#66999F'
+    white: '#B1B3B5'
+
+  bright:
+    black: '#3d3d3d'
+    red: '#92424c'
+    green: '#fbcb81'
+    blue: '#564695'
+    magenta: '#b182d9'
+    cyan: '#85adb2'
+    white: '#c1c2c4'
+
+window:
+  opacity: 0.9
+  decorations: none
+  padding:
+    x: 6
+    y: 6
+  title: Box
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 5000
+
+dynamic_title: true
+
+shell: 
+  program: zsh
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+  bold: 
+    family: Hack Nerd Font Mono
+    style: Bold
+  italic: 
+    family: Hack Nerd Font Mono
+    style: Italic
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
+  size: 12
+  offset:
+    x: 0
+    y: 1
+
+draw_bold_text_with_bright_colors: true
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: F11, mods: None, action: ToggleFullScreen }
+  - { key: Paste, mods: None, action: Paste }
+  - { key: Copy, mods: None, action: Copy }
+  - { key: L, mods: Control, action: ClearLogNotice }
+    #  - { key: L, mods: Control, action: "\x0c" }
+  - { key: PageUp, mods: None, action: ScrollPageUp, mode: ~Alt }
+  - { key: PageDown, mods: None, action: ScrollPageDown, mode: ~Alt }
+  - { key: Home, mods: Shift, action: ScrollToTop, mode: ~Alt }
+  - { key: End, mods: Shift, action: ScrollToBottom, mode: ~Alt }
+    
+    # A monument to what could have been
+    #key_bindings:
+    #  - { key: V,        mods: Control|Shift, action: Paste                      }
+    #  - { key: C,        mods: Control|Shift, action: Copy                       }
+    #  - { key: Insert,   mods: Shift,         action: PasteSelection             }
+    #  - { key: Key0,     mods: Control,       action: ResetFontSize              }
+    #  - { key: Equals,   mods: Control,       action: IncreaseFontSize           }
+    #  - { key: Plus,     mods: Control,       action: IncreaseFontSize           }
+    #  - { key: Minus,    mods: Control,       action: DecreaseFontSize           }
+    #  - { key: F11,      mods: None,          action: ToggleFullScreen           }
+    #  - { key: Paste,    mods: None,          action: Paste                      }
+    #  - { key: Copy,     mods: None,          action: Copy                       }
+    #  - { key: L,        mods: Control,       action: ClearLogNotice             }
+    #  - { key: L,        mods: Control,       action: "\x0c"                     }
+    #  - { key: PageUp,   mods: None,          action: ScrollPageUp,   mode: ~Alt }
+    #  - { key: PageDown, mods: None,          action: ScrollPageDown, mode: ~Alt }
+    #  - { key: Home,     mods: Shift,         action: ScrollToTop,    mode: ~Alt }
+    #  - { key: End,      mods: Shift,         action: ScrollToBottom, mode: ~Alt }
+
+
+
+
+
