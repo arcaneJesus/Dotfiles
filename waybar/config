@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "battery", "clock"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "battery", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -37,7 +37,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
-        "format": "{icon} {count}",
+        "format": "TABS {count}",
         "show-empty": false,
         "format-icons": ["", ""],
         "tooltip": true,
@@ -86,18 +86,18 @@
         "format-alt": "{:%m-%d-%Y}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% CPU",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% MEM"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -111,9 +111,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format": "{capacity}% BAT",
+        "format-charging": "{capacity}% BAT+",
+        "format-plugged": "{capacity}% BAT",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -124,11 +124,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
